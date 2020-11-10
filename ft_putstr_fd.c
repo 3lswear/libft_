@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sunderle <sunderle@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/14 19:19:48 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/10 15:12:52 by roman            ###   ########.fr       */
+/*   Created: 2020/08/24 13:03:35 by sunderle          #+#    #+#             */
+/*   Updated: 2020/11/10 14:40:55 by roman            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strlen(char *str)
+void	ft_putstr_fd(char *str, int fd)
 {
-	int count;
-
-	count = 0;
-	while (*str != '\0')
-	{
-		str++;
-		count++;
-	}
-	return (count);
+	write(fd, str, ft_strlen(str));
 }

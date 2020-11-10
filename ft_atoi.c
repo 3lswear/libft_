@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_atoi_strict.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/14 19:19:48 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/10 15:12:52 by roman            ###   ########.fr       */
+/*   Created: 2020/08/17 15:00:27 by sunderle          #+#    #+#             */
+/*   Updated: 2020/11/10 15:25:56 by roman            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	ft_strlen(char *str)
+int	isanum(char *chr)
 {
-	int count;
+	if (*chr < '0' || *chr > '9')
+		return (0);
+	return (1);
+}
 
-	count = 0;
-	while (*str != '\0')
+int	ft_atoi(char *str)
+{
+	int		result;
+
+	result = 0;
+	while (isanum(str))
 	{
+		result = result * 10 + (*str - '0');
 		str++;
-		count++;
 	}
-	return (count);
+	return (result);
 }

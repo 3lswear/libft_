@@ -1,26 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/14 19:19:48 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/10 15:12:52 by roman            ###   ########.fr       */
+/*   Created: 2020/11/10 17:27:21 by sunderle          #+#    #+#             */
+/*   Updated: 2020/11/10 17:28:55 by roman            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	ft_strlen(char *str)
+int	ft_isalnum(int c)
 {
-	int count;
-
-	count = 0;
-	while (*str != '\0')
-	{
-		str++;
-		count++;
-	}
-	return (count);
+	return ((ft_isalpha(c) || ft_isdigit(c)));
 }
