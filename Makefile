@@ -6,7 +6,7 @@
 #    By: sunderle <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/09 20:03:30 by sunderle          #+#    #+#              #
-#    Updated: 2020/11/10 13:10:03 by roman            ###   ########.fr        #
+#    Updated: 2020/11/10 14:49:34 by roman            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = $(wildcard ./*.c )
+SRC = $(wildcard ./ft_*.c )
 
 OBJS = ${SRC:.c=.o}
 
