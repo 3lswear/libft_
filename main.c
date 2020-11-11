@@ -19,6 +19,8 @@ int main()
 	printf("ft_isdigit -> %d\n", ft_isdigit('i'));
 	printf("ft_isalnum -> %d\n", ft_isalnum('-'));
 	printf("ft_isascii -> %d\n", ft_isascii('c'));
+	printf("ft_strchr -> %s\n", ft_strchr("cacd", 'c'));
+	printf("ft_strrchr -> %s\n", ft_strrchr("cacd", 'c'));
 
 
 	return 0;
