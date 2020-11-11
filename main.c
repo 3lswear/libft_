@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "libft.h"
 
 int main()
@@ -20,7 +21,10 @@ int main()
 	printf("ft_isalnum -> %d\n", ft_isalnum('-'));
 	printf("ft_isascii -> %d\n", ft_isascii('c'));
 	printf("ft_strchr -> %s\n", ft_strchr("cacd", 'c'));
+	printf("strchr -> %s\n", strchr("cacd", 'c'));
 	printf("ft_strrchr -> %s\n", ft_strrchr("cacd", 'c'));
+	printf("strrchr -> %s\n", strrchr("cacd", 'c'));
+	printf("ft_strnstr -> %s\n", ft_strnstr("Foo Bar Baz", "Bar", 4));
 
 
 	return 0;
