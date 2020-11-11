@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 12:33:06 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/10 17:38:41 by roman            ###   ########.fr       */
+/*   Updated: 2020/11/11 15:35:18 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,8 @@ int 	ft_isalpha(int c);
 int		ft_isdigit(int c);
 int 	ft_isalnum(int c);
 int 	ft_isascii(int c);
+char	*ft_strchr_bd(char *s, int c, int dir);
+char	*ft_strchr(char *s, int c);
+char	*ft_strrchr(char *s, int c);
 
 #endif
