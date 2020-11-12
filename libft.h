@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 12:33:06 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/12 13:30:18 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/12 18:38:10 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ char	*ft_strchr_bd(char *s, int c, int dir);
 char	*ft_strchr(char *s, int c);
 char	*ft_strrchr(char *s, int c);
 char	*ft_strnstr(char *haystack, char *needle, int len);
+void	*ft_memset(void *s, int c, unsigned int n);
+void	ft_bzero(void *s, unsigned int n);
 
 #endif
