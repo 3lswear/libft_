@@ -6,7 +6,7 @@
 #    By: sunderle <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/09 20:03:30 by sunderle          #+#    #+#              #
-#    Updated: 2020/11/11 14:49:51 by sunderle         ###   ########.fr        #
+#    Updated: 2020/11/12 13:26:32 by sunderle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,5 +38,14 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean $(NAME)
+
+# ADDITIONAL RULES!!!!
+
+main: $(NAME)
+	$(CC) $(CFLAGS) main.c -L=. -l=ft && ./a.out
+
+norm:
+	norminette_linux -R CheckForbiddenSourceHeader $(SRC)
+	norminette_linux -R CheckForbiddenSourceHeader $(HEADER)
 
 .PHONY: clean fclean all re
