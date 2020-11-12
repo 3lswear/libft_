@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "libft.h"
+#include <stdlib.h>
 
 int main()
 {
@@ -25,6 +26,15 @@ int main()
 	printf("ft_strrchr -> %s\n", ft_strrchr("cacd", 'c'));
 	printf("strrchr -> %s\n", strrchr("cacd", 'c'));
 	printf("ft_strnstr -> %s\n", ft_strnstr("Foo Bar Baz", "Bar", 4));
+	char *memset_str1;
+	memset_str1 = (char *)malloc(sizeof(char) * 10);
+	strcpy(memset_str1, "toto tata");
+	printf("string => %s\n", memset_str1);
+	printf("ft_memset -> %s\n", (char *)ft_memset(memset_str1, 'a', 3));
+	strcpy(memset_str1, "toto tata");
+	printf("memset -> %s\n", (char *)memset(memset_str1, 'a', 3));
+	bzero(memset_str1, ft_strlen(memset_str1));
+	printf("string after ft_bzero -> [%s]\n", memset_str1);
 
 
 	return 0;
