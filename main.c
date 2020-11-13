@@ -35,7 +35,28 @@ int main()
 	printf("memset -> %s\n", (char *)memset(memset_str1, 'a', 3));
 	bzero(memset_str1, ft_strlen(memset_str1));
 	printf("string after ft_bzero -> [%s]\n", memset_str1);
-
+	printf("pointers test: [0]->%p; [3]->%p\n", &memset_str1[0], &memset_str1[3]);
+	puts("***ft_memmove test!!!!***");
+	char *src_memmove, *dest_memmove;
+	src_memmove = (char *)malloc(5 * sizeof(char));
+	dest_memmove = (char *)malloc(5 * sizeof(char));
+	strcpy(src_memmove, "abcd");
+	strcpy(dest_memmove, "hjkl");
+	printf("dest is -> %s (no overlap)\n", (char *)ft_memmove(dest_memmove, src_memmove, 4));
+	src_memmove = (char *)malloc(7 * sizeof(char));
+	dest_memmove = &src_memmove[2];
+	strcpy(dest_memmove, "hjkl");
+	strcpy(src_memmove, "abcd");
+	src_memmove[4] = 'k';
+	printf("whole string is => %s\n", src_memmove);
+	printf("dest is -> %s (w/ overlap of 2)\n", (char *)ft_memmove(dest_memmove, src_memmove, 4));
+	dest_memmove = (char *)malloc(7 * sizeof(char));
+	src_memmove = &dest_memmove[2];
+	strcpy(dest_memmove, "hjkl");
+	strcpy(src_memmove, "abcd");
+	dest_memmove[4] = 'c';
+	printf("whole string is => %s\n", dest_memmove);
+	printf("dest is -> %s (w/ overlap of 2, (d<s))\n", (char *)ft_memmove(dest_memmove, src_memmove, 4));
 
 	return 0;
 }
