@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 12:33:06 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/13 03:15:58 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/13 17:34:06 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
+int		ft_isprint(int c);
 char	*ft_strchr_bd(char *s, int c, int dir);
 char	*ft_strchr(char *s, int c);
 char	*ft_strrchr(char *s, int c);
@@ -31,5 +32,6 @@ void	*ft_memset(void *s, int c, unsigned int n);
 void	ft_bzero(void *s, unsigned int n);
 void	*ft_memmove(void *dest, void *src, unsigned int n);
 void	*ft_memcpy_bd(void *dest, void *src, unsigned int n, int dir);
+void	*ft_memcpy(void *dest, void *src, unsigned int n);
 
 #endif

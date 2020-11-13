@@ -21,6 +21,7 @@ int main()
 	printf("ft_isdigit -> %d\n", ft_isdigit('i'));
 	printf("ft_isalnum -> %d\n", ft_isalnum('-'));
 	printf("ft_isascii -> %d\n", ft_isascii('c'));
+	printf("ft_isprint -> %d\n", ft_isprint('A'));
 	printf("ft_strchr -> %s\n", ft_strchr("cacd", 'c'));
 	printf("strchr -> %s\n", strchr("cacd", 'c'));
 	printf("ft_strrchr -> %s\n", ft_strrchr("cacd", 'c'));
@@ -42,7 +43,8 @@ int main()
 	dest_memmove = (char *)malloc(5 * sizeof(char));
 	strcpy(src_memmove, "abcd");
 	strcpy(dest_memmove, "hjkl");
-	printf("dest is -> %s (no overlap)\n", (char *)ft_memmove(dest_memmove, src_memmove, 4));
+	printf("strings are: src => %s, dest => %s\n", src_memmove, dest_memmove);
+	printf("dest is -> %s (no overlap)\n", (char *)ft_memcpy(dest_memmove, src_memmove, 4));
 	src_memmove = (char *)malloc(7 * sizeof(char));
 	dest_memmove = &src_memmove[2];
 	strcpy(dest_memmove, "hjkl");
@@ -57,6 +59,7 @@ int main()
 	dest_memmove[4] = 'c';
 	printf("whole string is => %s\n", dest_memmove);
 	printf("dest is -> %s (w/ overlap of 2, (d<s))\n", (char *)ft_memmove(dest_memmove, src_memmove, 4));
+
 
 	return 0;
 }
