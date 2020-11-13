@@ -59,6 +59,8 @@ int main()
 	dest_memmove[4] = 'c';
 	printf("whole string is => %s\n", dest_memmove);
 	printf("dest is -> %s (w/ overlap of 2, (d<s))\n", (char *)ft_memmove(dest_memmove, src_memmove, 4));
+	printf("char toupper -> %c\n", ft_toupper('a'));
+	printf("char tolower -> %c\n", ft_tolower('Z'));
 
 
 	return 0;
