@@ -61,6 +61,9 @@ int main()
 	printf("dest is -> %s (w/ overlap of 2, (d<s))\n", (char *)ft_memmove(dest_memmove, src_memmove, 4));
 	printf("char toupper -> %c\n", ft_toupper('a'));
 	printf("char tolower -> %c\n", ft_tolower('Z'));
+	char memchr_char = 'h';
+	char *memchr_string = "henlo iama string";
+	printf("the string is [%1$s], pointer is %1$p, char is [%2$3s], char pointer is %2$p\n", memchr_string, ((char *)ft_memchr(memchr_string, memchr_char, ft_strlen(memchr_string))));
 
 
 	return 0;
