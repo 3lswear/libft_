@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 12:33:06 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/17 04:38:57 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/18 03:27:50 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ void	*ft_memmove(void *dest, void *src, unsigned int n);
 void	*ft_memcpy_bd(void *dest, void *src, unsigned int n, int dir);
 void	*ft_memcpy(void *dest, void *src, unsigned int n);
 void	*ft_memchr(void *s, int c, unsigned int n);
+int		ft_memcmp(void *s1, void *s2, unsigned int n);
 
 #endif

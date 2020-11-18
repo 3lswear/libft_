@@ -64,6 +64,9 @@ int main()
 	char memchr_char = 'h';
 	char *memchr_string = "henlo iama string";
 	printf("the string is [%1$s], pointer is %1$p, char is [%2$3s], char pointer is %2$p\n", memchr_string, ((char *)ft_memchr(memchr_string, memchr_char, ft_strlen(memchr_string))));
+	char *memcmp_str1 = "abhdef";
+	char *memcmp_str2 = "abcaeg";
+	printf("string1 => [%s] string2 => [%s], ft_memcmp -> [%d]\n", memcmp_str1, memcmp_str2, ft_memcmp(memcmp_str1, memcmp_str2, 3));
 
 
 	return 0;
