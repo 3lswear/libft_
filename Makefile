@@ -6,7 +6,7 @@
 #    By: sunderle <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/09 20:03:30 by sunderle          #+#    #+#              #
-#    Updated: 2020/11/12 13:26:32 by sunderle         ###   ########.fr        #
+#    Updated: 2020/11/20 18:48:47 by sunderle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,16 +16,38 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = $(wildcard ./ft_*.c )
+SRC = \
+	ft_atoi.c \
+	ft_isalpha.c \
+	ft_isprint.c \
+	ft_memcpy_bd.c \
+	ft_memset.c \
+	ft_strchr.c \
+	ft_strnstr.c \
+	ft_toupper.c\
+	ft_bzero.c \
+	ft_isascii.c \
+	ft_memchr.c \
+	ft_memcpy.c \
+	ft_putstr_fd.c \
+	ft_strlen.c \
+	ft_strrchr.c\
+	ft_isalnum.c \
+	ft_isdigit.c \
+	ft_memcmp.c \
+	ft_memmove.c \
+	ft_strchr_bd.c \
+	ft_strncmp.c \
+	ft_tolower.c
 
-OBJS = ${SRC:.c=.o}
+OBJS = $(SRC:.c=.o)
 
 HEADER = ./libft.h
 
 all: $(NAME)
 
-$(OBJS): $(HEADER) $(SRC)
-	$(CC) $(CFLAGS) -c $(SRC) -include $(HEADER)
+$(OBJS): %.o: %.c $(HEADER)
+	$(CC) $(CFLAGS) -c $< -include $(HEADER)
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
