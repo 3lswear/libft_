@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <bsd/string.h>
 #include "libft.h"
 #include <stdlib.h>
 
@@ -67,7 +68,49 @@ int main()
 	char *memcmp_str1 = "abhdef";
 	char *memcmp_str2 = "abcaeg";
 	printf("string1 => [%s] string2 => [%s], ft_memcmp -> [%d]\n", memcmp_str1, memcmp_str2, ft_memcmp(memcmp_str1, memcmp_str2, 3));
+	printf("*** strls ***\n");
+	char *strlcpy_dest;
+	char *strlcpy_src;
 
+	strlcpy_dest = (char *)malloc(10 * sizeof(char));
+	strlcpy_src = (char *)malloc(10 * sizeof(char));
+	strcpy(strlcpy_src, "popa");
+
+	printf("ft_strlcpy of [%s], [%s] returns -> %u\n", strlcpy_dest, strlcpy_src, ft_strlcpy(strlcpy_dest, strlcpy_src, 4));
+	printf("dest => [%s], src => [%s]\n", strlcpy_dest, strlcpy_src);
+
+	strlcpy_dest = (char *)malloc(10 * sizeof(char));
+	strlcpy_src = (char *)malloc(10 * sizeof(char));
+	strcpy(strlcpy_src, "popa");
+
+	printf("strlcpy of [%s], [%s] returns -> %lu\n", strlcpy_dest, strlcpy_src, strlcpy(strlcpy_dest, strlcpy_src, 4));
+	printf("dest => [%s], src => [%s]\n", strlcpy_dest, strlcpy_src);
+
+	printf("\n");
+
+	char *strlcat_dest;
+	char *strlcat_src;
+	int strcat_size = 10;
+
+	strlcat_dest = (char *)malloc(10 * sizeof(char));
+	strlcat_src = (char *)malloc(10 * sizeof(char));
+	strcat(strlcat_src, "popapopa");
+	strcat(strlcat_dest, "joppa");
+
+	printf("dest => [%s], src => [%s]\n", strlcat_dest, strlcat_src);
+	printf("ft_strlcat returns -> %u\n", ft_strlcat(strlcat_dest, strlcat_src, strcat_size));
+	printf("dest => [%s], src => [%s]\n", strlcat_dest, strlcat_src);
+
+	printf("\n");
+
+	strlcat_dest = (char *)malloc(10 * sizeof(char));
+	strlcat_src = (char *)malloc(10 * sizeof(char));
+	strcat(strlcat_src, "popapopa");
+	strcat(strlcat_dest, "joppa");
+
+	printf("dest => [%s], src => [%s]\n", strlcat_dest, strlcat_src);
+	printf("strlcat returns -> %lu\n", strlcat(strlcat_dest, strlcat_src, strcat_size));
+	printf("dest => [%s], src => [%s]\n", strlcat_dest, strlcat_src);
 
 	return 0;
 }
