@@ -6,7 +6,7 @@
 #    By: sunderle <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/09 20:03:30 by sunderle          #+#    #+#              #
-#    Updated: 2020/11/21 21:26:54 by sunderle         ###   ########.fr        #
+#    Updated: 2020/11/22 02:05:41 by sunderle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,6 @@ SRC = \
 	./ft_isascii.c \
 	./ft_memchr.c \
 	./ft_memcpy.c \
-	./ft_putstr_fd.c \
 	./ft_strlen.c \
 	./ft_strrchr.c\
 	./ft_isalnum.c \
@@ -43,6 +42,10 @@ SRC = \
 	./ft_strlcat.c \
 	./ft_strdup.c \
 	./ft_calloc.c \
+	./ft_putstr_fd.c \
+	./ft_putchar_fd.c \
+	./ft_putendl_fd.c \
+	./ft_putnbr_fd.c \
 
 OBJS = $(SRC:.c=.o)
 

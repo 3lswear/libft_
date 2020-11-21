@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 12:33:06 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/21 23:42:32 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/22 01:10:44 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int				ft_atoi(char *str);
 
 int				ft_strlen(char *str);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
-void			ft_putstr_fd(char *str, int fd);
 char			*ft_strchr_bd(char *s, int c, int dir);
 char			*ft_strchr(char *s, int c);
 char			*ft_strrchr(char *s, int c);
@@ -29,6 +28,11 @@ char			*ft_strnstr(char *haystack, char *needle, int len);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
 char			*ft_strdup(char *src);
+
+void			ft_putstr_fd(char *str, int fd);
+void			ft_putchar_fd(char c, int fd);
+void			ft_putendl_fd(char *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
 
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);

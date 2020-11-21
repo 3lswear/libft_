@@ -125,6 +125,19 @@ int main()
 	calloc_string = ft_calloc(5, sizeof(char));
 	ft_strlcpy(calloc_string, "popa jopa", 5);
 	printf("calloc_string is => [%s]\n", calloc_string);
+	ft_putendl_fd("***testing putters ***", 1);
+	ft_putstr_fd("putting string to stdout", 1);
+	ft_putchar_fd('\n', 1);
+	ft_putchar_fd('a', 1);
+	ft_putchar_fd('\n', 1);
+
+	ft_putchar_fd('\n', 1);
+
+	int putnbr_int = -90;
+	ft_putstr_fd("ft_putnbr_fd test	", 1);
+	ft_putnbr_fd(putnbr_int, 1);
+	ft_putchar_fd('\n', 1);
+	printf("			%d\n", putnbr_int);
 
 
 	return 0;
