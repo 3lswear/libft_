@@ -65,12 +65,13 @@ re: fclean $(NAME)
 
 # ADDITIONAL RULES!!!!
 BSDFLAGS = -l=bsd
+GREPHL = grep  --color=always -e "^" -e "Error"
 
 main: $(NAME)
 	$(CC) $(CFLAGS) main.c $(BSDFLAGS) -L=. -l=ft && ./a.out
 
 norm:
-	norminette_linux -R CheckForbiddenSourceHeader $(SRC)
-	norminette_linux -R CheckForbiddenSourceHeader $(HEADER)
+	norminette_linux -R CheckForbiddenSourceHeader $(SRC) | $(GREPHL)
+	norminette_linux -R CheckForbiddenSourceHeader $(HEADER) | $(GREPHL)
 
 .PHONY: clean fclean all re
