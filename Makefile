@@ -6,7 +6,7 @@
 #    By: sunderle <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/09 20:03:30 by sunderle          #+#    #+#              #
-#    Updated: 2020/11/21 18:07:37 by sunderle         ###   ########.fr        #
+#    Updated: 2020/11/21 21:26:54 by sunderle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,9 @@ SRC = \
 	./ft_strncmp.c \
 	./ft_tolower.c \
 	./ft_strlcpy.c \
-	./ft_strlcat.c
+	./ft_strlcat.c \
+	./ft_strdup.c \
+	./ft_calloc.c \
 
 OBJS = $(SRC:.c=.o)
 
