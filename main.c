@@ -3,6 +3,8 @@
 #include <bsd/string.h>
 #include "libft.h"
 #include <stdlib.h>
+#include <limits.h>
+#include <stdint.h>
 
 int main()
 {
@@ -111,6 +113,19 @@ int main()
 	printf("dest => [%s], src => [%s]\n", strlcat_dest, strlcat_src);
 	printf("strlcat returns -> %lu\n", strlcat(strlcat_dest, strlcat_src, strcat_size));
 	printf("dest => [%s], src => [%s]\n", strlcat_dest, strlcat_src);
+
+	printf("*** malloc funcs !! ***\n");
+	char *strdup_src;
+
+	strdup_src = "dfasdf";
+	printf("strdup_src => [%s]\nft_strdup -> [%s]\n", strdup_src, ft_strdup(strdup_src));
+	/* printf("%lu\n", SIZE_MAX); */
+	/* printf("%lu\n", FT_SIZE_MAX); */
+	char *calloc_string;
+	calloc_string = ft_calloc(5, sizeof(char));
+	ft_strlcpy(calloc_string, "popa jopa", 5);
+	printf("calloc_string is => [%s]\n", calloc_string);
+
 
 	return 0;
 }
