@@ -6,7 +6,7 @@
 #    By: sunderle <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/09 20:03:30 by sunderle          #+#    #+#              #
-#    Updated: 2020/11/22 02:05:41 by sunderle         ###   ########.fr        #
+#    Updated: 2020/11/23 16:24:35 by sunderle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,10 @@ SRC = \
 	./ft_putchar_fd.c \
 	./ft_putendl_fd.c \
 	./ft_putnbr_fd.c \
+	./ft_substr.c \
+	./ft_strjoin.c \
+	./ft_strtrim.c \
+	./ft_itoa.c \
 
 OBJS = $(SRC:.c=.o)
 

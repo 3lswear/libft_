@@ -6,6 +6,16 @@
 #include <limits.h>
 #include <stdint.h>
 
+	/* size_t	ft_lg(int n) */
+	/* { */
+	/* 	size_t result; */
+
+	/* 	result = 0; */
+	/* 	while ((n = n / 10)) */
+	/* 		result++; */
+	/* 	return (result); */
+	/* } */
+
 int main()
 {
 
@@ -133,12 +143,37 @@ int main()
 
 	ft_putchar_fd('\n', 1);
 
-	int putnbr_int = -90;
+	int putnbr_int = 0;
 	ft_putstr_fd("ft_putnbr_fd test	", 1);
 	ft_putnbr_fd(putnbr_int, 1);
 	ft_putchar_fd('\n', 1);
 	printf("			%d\n", putnbr_int);
 
+	ft_putchar_fd('\n', 1);
 
+	char *substr_str = "hello i am a string";
+	printf("ft_substr output -> [%s]\n", ft_substr(substr_str, 1, 19));
+
+	ft_putchar_fd('\n', 1);
+
+	char *strjoin_str1 = "hello";
+	char *strjoin_str2 = "i ama string";
+	char *strjoin_result = ft_strjoin(strjoin_str1, strjoin_str2);
+	printf("ft_strjoin output -> [%s]\n", strjoin_result);
+
+	ft_putchar_fd('\n', 1);
+
+	char *strtrim_str = "aba";
+	char *strtrim_set = "a";
+	printf("\t\t\t[%s]\n", strtrim_str);
+	printf("ft_strtrim output -> \t[%s]\n", ft_strtrim(strtrim_str, strtrim_set));
+
+
+	ft_putchar_fd('\n', 1);
+
+	/* printf("output of ft_lg -> %ld\n", ft_lg(13246)); */
+	int itoa_n = 2147483647;
+	printf("output of ft_itoa ->\t[%s]\n", ft_itoa(itoa_n));
+	printf("oupput of printf ->\t[%d]\n", itoa_n);
 	return 0;
 }

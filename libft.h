@@ -28,6 +28,10 @@ char			*ft_strnstr(char *haystack, char *needle, int len);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
 char			*ft_strdup(char *src);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strtrim(char const *s1, char const *set);
+char			*ft_itoa(int n);
 
 void			ft_putstr_fd(char *str, int fd);
 void			ft_putchar_fd(char c, int fd);
