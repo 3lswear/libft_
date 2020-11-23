@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 12:33:06 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/22 01:10:44 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/23 15:25:34 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 int				ft_atoi(char *str);
 
-int				ft_strlen(char *str);
+size_t			ft_strlen(const char *str);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
 char			*ft_strchr_bd(char *s, int c, int dir);
 char			*ft_strchr(char *s, int c);
