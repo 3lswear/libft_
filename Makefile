@@ -65,10 +65,10 @@ $(NAME): $(OBJS)
 	ranlib $(NAME)
 
 clean:
-	rm -f $(OBJS)
+	$(RM) $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean $(NAME)
 
