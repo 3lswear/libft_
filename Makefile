@@ -6,7 +6,7 @@
 #    By: sunderle <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/09 20:03:30 by sunderle          #+#    #+#              #
-#    Updated: 2020/11/24 02:03:52 by sunderle         ###   ########.fr        #
+#    Updated: 2020/11/24 04:23:00 by sunderle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,5 +84,9 @@ main: $(NAME)
 norm:
 	norminette_linux -R CheckForbiddenSourceHeader $(SRC) | $(GREPHL)
 	norminette_linux -R CheckForbiddenSourceHeader $(HEADER) | $(GREPHL)
+
+so:
+	$(CC) -fPIC $(CFLAGS) $(SRC)
+	gcc -shared -o libft.so $(OBJ)
 
 .PHONY: clean fclean all re
