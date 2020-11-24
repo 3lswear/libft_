@@ -6,11 +6,11 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 15:34:43 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/11 15:34:56 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/24 01:34:47 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	return (ft_strchr_bd(s, c, 1));
 }
