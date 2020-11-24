@@ -88,7 +88,7 @@ int main()
 	strlcpy_src = (char *)malloc(10 * sizeof(char));
 	strcpy(strlcpy_src, "popa");
 
-	printf("ft_strlcpy of [%s], [%s] returns -> %u\n", strlcpy_dest, strlcpy_src, ft_strlcpy(strlcpy_dest, strlcpy_src, 4));
+	printf("ft_strlcpy of [%s], [%s] returns -> %lu\n", strlcpy_dest, strlcpy_src, ft_strlcpy(strlcpy_dest, strlcpy_src, 4));
 	printf("dest => [%s], src => [%s]\n", strlcpy_dest, strlcpy_src);
 
 	strlcpy_dest = (char *)malloc(10 * sizeof(char));
@@ -110,7 +110,7 @@ int main()
 	strcat(strlcat_dest, "joppa");
 
 	printf("dest => [%s], src => [%s]\n", strlcat_dest, strlcat_src);
-	printf("ft_strlcat returns -> %u\n", ft_strlcat(strlcat_dest, strlcat_src, strcat_size));
+	printf("ft_strlcat returns -> %lu\n", ft_strlcat(strlcat_dest, strlcat_src, strcat_size));
 	printf("dest => [%s], src => [%s]\n", strlcat_dest, strlcat_src);
 
 	printf("\n");
@@ -175,5 +175,18 @@ int main()
 	int itoa_n = 2147483647;
 	printf("output of ft_itoa ->\t[%s]\n", ft_itoa(itoa_n));
 	printf("oupput of printf ->\t[%d]\n", itoa_n);
+
+	ft_putchar_fd('\n', 1);
+
+	char *split_str = "  hello      I am a space-separated string ";
+	char sep = ' ';
+	char **split_result;
+	int splt_i = 0;
+	split_result = ft_split(split_str, sep);
+	while (split_result[splt_i])
+	{
+		printf("[%s]\n", split_result[splt_i]);
+		splt_i++;
+	}
 	return 0;
 }
