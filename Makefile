@@ -6,13 +6,13 @@
 #    By: sunderle <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/09 20:03:30 by sunderle          #+#    #+#              #
-#    Updated: 2020/11/24 04:23:00 by sunderle         ###   ########.fr        #
+#    Updated: 2020/11/24 05:12:08 by sunderle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = gcc
+CC = clang
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -87,6 +87,6 @@ norm:
 
 so:
 	$(CC) -fPIC $(CFLAGS) $(SRC)
-	gcc -shared -o libft.so $(OBJ)
+	gcc -shared -o libft.so $(OBJS)
 
 .PHONY: clean fclean all re
