@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 00:40:34 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/24 04:10:41 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/24 04:44:26 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,13 @@ char			**ft_split(char const *s, char c)
 	int				len;
 
 	wc = get_wc(s, c);
-	if (s)
+	if (s != NULL)
 	{
 		result = (char **)malloc((wc + 1) * sizeof(char *));
 		result[wc] = NULL;
 	}
+	else
+		return (NULL);
 	j = 0;
 	if (result)
 		while (j < wc)
