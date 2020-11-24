@@ -6,9 +6,11 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 15:18:31 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/24 01:34:39 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/24 04:29:14 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

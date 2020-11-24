@@ -6,9 +6,11 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 00:15:12 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/22 00:17:35 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/24 04:32:45 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

@@ -6,9 +6,11 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 18:20:10 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/12 13:13:00 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/24 04:30:08 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strnstr(char *haystack, char *needle, int len)
 {
