@@ -6,13 +6,13 @@
 #    By: sunderle <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/09 20:03:30 by sunderle          #+#    #+#              #
-#    Updated: 2020/11/24 05:12:08 by sunderle         ###   ########.fr        #
+#    Updated: 2020/11/24 05:30:21 by sunderle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = clang
+CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
