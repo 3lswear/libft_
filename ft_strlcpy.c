@@ -6,11 +6,13 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/15 17:17:10 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/21 18:39:18 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/24 00:17:43 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	unsigned int	src_len;
 	unsigned int	i;
