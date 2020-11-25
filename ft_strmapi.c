@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 00:11:54 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/24 00:37:07 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/25 15:34:45 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*result;
 	unsigned int	i;
 
+	if (!s)
+		return (NULL);
 	result = ft_strdup(s);
 	i = 0;
 	if (result && f)
