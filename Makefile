@@ -80,6 +80,7 @@ BSDFLAGS = -l=bsd
 GREPHL = grep  --color=always -e "^" -e "Error"
 
 main: $(NAME)
+	$(RM) libft.so
 	$(CC) $(CFLAGS) main.c $(BSDFLAGS) -L=. -l=ft && ./a.out
 
 norm:
