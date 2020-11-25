@@ -6,11 +6,13 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 03:12:18 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/13 12:30:11 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/25 12:43:12 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy_bd(void *dest, void *src, unsigned int n, int dir)
+#include "libft.h"
+
+void	*ft_memcpy_bd(void *dest, const void *src, size_t n, int dir)
 {
 	char *d;
 	char *s;
