@@ -4,3 +4,4 @@ libft.so
 a.out
 .*
 tags
+leak.out
