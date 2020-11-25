@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:37:02 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/23 14:21:02 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/25 15:22:10 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	str = s1;
 	start = 0;
+	if (!s1)
+		return (NULL);
 	while (str[start] && ft_in_set(set, str[start]))
 		start++;
 	end = ft_strlen(str) - 1;
