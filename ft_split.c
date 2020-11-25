@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 00:40:34 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/24 04:44:26 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/26 01:23:59 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,20 @@ unsigned int	get_wc(const char *s, char sep)
 	return (count);
 }
 
+void			*liberator(char **array)
+{
+	size_t i;
+
+	i = 0;
+	while (array[i])
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
+	return (NULL);
+}
+
 char			**ft_split(char const *s, char c)
 {
 	char			**result;
@@ -46,16 +60,16 @@ char			**ft_split(char const *s, char c)
 	unsigned int	j;
 	int				len;
 
-	wc = get_wc(s, c);
-	if (s != NULL)
+	if (s)
 	{
+		wc = get_wc(s, c);
 		result = (char **)malloc((wc + 1) * sizeof(char *));
-		result[wc] = NULL;
 	}
 	else
 		return (NULL);
 	j = 0;
 	if (result)
+	{
 		while (j < wc)
 		{
 			while (ft_issep(s, c))
@@ -63,9 +77,12 @@ char			**ft_split(char const *s, char c)
 			len = ft_strchr(s, c) - s;
 			if (len < 0)
 				len = ft_strlen(s);
-			result[j++] = ft_substr(s, 0, len);
+			if (!(result[j++] = ft_substr(s, 0, len)))
+				liberator(result);
 			while (!ft_issep(s, c) && *s)
 				s++;
 		}
+		result[wc] = NULL;
+	}
 	return (result);
 }
