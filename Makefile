@@ -86,7 +86,7 @@ norm:
 	norminette_linux -R CheckForbiddenSourceHeader $(HEADER) | $(GREPHL)
 
 so:
-	$(CC) -fPIC $(CFLAGS) $(SRC)
+	$(CC) -fPIC $(CFLAGS) -c $(SRC)
 	gcc -shared -o libft.so $(OBJS)
 
 .PHONY: clean fclean all re
