@@ -6,7 +6,7 @@
 #    By: sunderle <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/09 20:03:30 by sunderle          #+#    #+#              #
-#    Updated: 2020/11/24 05:30:21 by sunderle         ###   ########.fr        #
+#    Updated: 2020/11/25 12:51:16 by sunderle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,7 @@ SRC = \
 	./ft_itoa.c \
 	./ft_strmapi.c \
 	./ft_split.c \
+	./ft_memccpy.c \
 
 OBJS = $(SRC:.c=.o)
 
