@@ -6,7 +6,7 @@
 #    By: sunderle <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/09 20:03:30 by sunderle          #+#    #+#              #
-#    Updated: 2020/11/25 12:51:16 by sunderle         ###   ########.fr        #
+#    Updated: 2020/11/26 01:32:50 by sunderle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,6 +82,16 @@ GREPHL = grep  --color=always -e "^" -e "Error"
 main: $(NAME)
 	$(RM) libft.so
 	$(CC) $(CFLAGS) main.c $(BSDFLAGS) -L=. -l=ft && ./a.out
+
+leak.out: $(NAME) leak.c
+	$(RM) libft.so
+	$(CC) $(CFLAGS) leak.c $(BSDFLAGS) -L=. -l=ft -o leak.out
+
+leak: leak.out
+	./leak.out
+
+testleaks: leak.out
+	valgrind ./leak.out
 
 norm:
 	norminette_linux -R CheckForbiddenSourceHeader $(SRC) | $(GREPHL)
