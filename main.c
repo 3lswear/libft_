@@ -6,6 +6,8 @@
 #include <limits.h>
 #include <stdint.h>
 
+#include <ctype.h>
+
 	/* size_t	ft_lg(int n) */
 	/* { */
 	/* 	size_t result; */
@@ -178,19 +180,6 @@ int main()
 
 	ft_putchar_fd('\n', 1);
 
-	char *split_str = "  hello      I am a space-separated string ";
-	char sep = ' ';
-	char **split_result;
-	int splt_i = 0;
-	split_result = ft_split(split_str, sep);
-	while (split_result[splt_i])
-	{
-		printf("[%s]\n", split_result[splt_i]);
-		splt_i++;
-	}
-
-	ft_putchar_fd('\n', 1);
-
 	char *atoi_int = "     -214 7483647    ";
 	printf("ft_atoi \t%d\n", ft_atoi(atoi_int));
 	printf("atoi \t\t%d\n", atoi(atoi_int));
@@ -214,5 +203,44 @@ int main()
 	printf("memccpy_dest =>\t[%s]\n", memccpy_dest);
 	printf("memccpy_ret =>\t[%s]\n", memccpy_ret);
 
+
+	ft_putchar_fd('\n', 1);
+
+	char *str = "BBBB";
+	char buff1[0xF00];
+	char buff2[0xF00];
+
+	memset(buff1, 'A', 20);
+	memset(buff2, 'A', 20);
+	printf("strlcpy ->\t%lu\n", strlcpy(buff1, str, 0));
+	printf("ft_strlcpy ->\t%lu\n", ft_strlcpy(buff1, str, 0));
+	
+
+	ft_putchar_fd('\n', 1);
+
+	int tolower_i = -100;
+	while (tolower_i < -90)
+	{
+		printf("i\t\t=>[%d]\ntolower_i\t=>[%d]\n\n", tolower_i, tolower(tolower_i));
+		tolower_i++;
+	}
+	printf("%d\n", 'a' - 'A');
+
+	ft_putchar_fd('\n', 1);
+
+	printf("strnstr ->\t[%s]\n", strnstr("lorem ipsum dolor sit amet", "", 1));
+
+	ft_putchar_fd('\n', 1);
+
+	char *split_str = "      split       this for   me  !       ";
+	char sep = ' ';
+	char **split_result;
+	int splt_i = 0;
+	split_result = ft_split(split_str, sep);
+	while (split_result[splt_i])
+	{
+		printf("[%s]\n", split_result[splt_i]);
+		splt_i++;
+	}
 	return 0;
 }
