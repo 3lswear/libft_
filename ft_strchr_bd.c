@@ -6,22 +6,26 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 15:01:46 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/24 02:03:37 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/25 14:40:34 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr_bd(const char *s, int c, int dir)
 {
-	char *retval;
+	char	*retval;
+	size_t	i;
 
-	retval = 0;
-	while (*s)
+	retval = NULL;
+	i = 0;
+	while (i <= ft_strlen(s))
 	{
-		if (c == *s)
-			retval = (char *)s;
+		if ((unsigned char)c == s[i])
+			retval = (char *)&s[i];
 		if ((dir == 0) && (retval))
 			return (retval);
-		s++;
+		i++;
 	}
 	return (retval);
 }
