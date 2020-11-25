@@ -6,7 +6,7 @@
 /*   By: sunderle <sunderle@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 13:03:35 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/24 04:33:33 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/25 23:46:32 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_putstr_fd(char *str, int fd)
 {
-	write(fd, str, ft_strlen(str));
+	if (str)
+		write(fd, str, ft_strlen(str));
 }
