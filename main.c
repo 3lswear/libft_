@@ -188,5 +188,31 @@ int main()
 		printf("[%s]\n", split_result[splt_i]);
 		splt_i++;
 	}
+
+	ft_putchar_fd('\n', 1);
+
+	char *atoi_int = "     -214 7483647    ";
+	printf("ft_atoi \t%d\n", ft_atoi(atoi_int));
+	printf("atoi \t\t%d\n", atoi(atoi_int));
+
+	ft_putchar_fd('\n', 1);
+
+	char *memccpy_src = "copy till X lalala";
+	char *memccpy_dest = (char *)malloc(sizeof(char) * 0x21);
+	char *memccpy_ret;
+	memccpy_dest[0x20] = '\0';
+
+	memccpy_ret = ft_memccpy(memccpy_dest, memccpy_src, 'X', ft_strlen(memccpy_src));
+	printf("memccpy_dest =>\t[%s]\n", memccpy_dest);
+	printf("memccpy_ret =>\t[%s]\n", memccpy_ret);
+
+	memccpy_src = "copy till X lalala";
+	memccpy_dest = (char *)malloc(sizeof(char) * 0x21);
+	memccpy_dest[0x20] = '\0';
+
+	memccpy_ret = memccpy(memccpy_dest, memccpy_src, 'X', ft_strlen(memccpy_src));
+	printf("memccpy_dest =>\t[%s]\n", memccpy_dest);
+	printf("memccpy_ret =>\t[%s]\n", memccpy_ret);
+
 	return 0;
 }
