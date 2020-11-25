@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 15:25:09 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/23 17:19:31 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/25 22:29:56 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ char	*ft_itoa(int n)
 		len++;
 	if (!(result = (char *)malloc((len + 1) * sizeof(char))))
 		return (NULL);
+	result[len] = '\0';
 	while (len--)
 	{
 		digit = num % 10;
