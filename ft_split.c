@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 00:40:34 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/26 01:23:59 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/26 02:09:09 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,29 +60,22 @@ char			**ft_split(char const *s, char c)
 	unsigned int	j;
 	int				len;
 
-	if (s)
-	{
-		wc = get_wc(s, c);
-		result = (char **)malloc((wc + 1) * sizeof(char *));
-	}
-	else
+	if (!s || !(result = (char **)malloc((get_wc(s, c) + 1) * sizeof(char *))))
 		return (NULL);
 	j = 0;
-	if (result)
+	wc = get_wc(s, c);
+	while (j < wc)
 	{
-		while (j < wc)
-		{
-			while (ft_issep(s, c))
-				s++;
-			len = ft_strchr(s, c) - s;
-			if (len < 0)
-				len = ft_strlen(s);
-			if (!(result[j++] = ft_substr(s, 0, len)))
-				liberator(result);
-			while (!ft_issep(s, c) && *s)
-				s++;
-		}
-		result[wc] = NULL;
+		while (ft_issep(s, c))
+			s++;
+		len = ft_strchr(s, c) - s;
+		if (len < 0)
+			len = ft_strlen(s);
+		if (!(result[j++] = ft_substr(s, 0, len)))
+			return (liberator(result));
+		while (!ft_issep(s, c) && *s)
+			s++;
 	}
+	result[wc] = NULL;
 	return (result);
 }
