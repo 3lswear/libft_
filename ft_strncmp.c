@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft-strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/16 15:54:55 by sunderle          #+#    #+#             */
-/*   Updated: 2020/08/25 14:10:18 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/25 14:53:50 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include "libft.h"
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char			*string1;
-	char			*string2;
-	unsigned int	count;
-	int				retval;
+	const char	*string1;
+	const char	*string2;
+	size_t		count;
+	int			retval;
 
 	string1 = s1;
 	string2 = s2;
@@ -25,7 +27,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	{
 		if (*string1 != '\0' || *string2 != '\0')
 		{
-			retval = *string1 - *string2;
+			retval = ((unsigned char)*string1 - (unsigned char)*string2);
 			if (retval)
 				return (retval);
 		}
