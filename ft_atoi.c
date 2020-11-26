@@ -6,11 +6,12 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/17 15:00:27 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/26 01:50:46 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/26 14:37:35 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#define FT_INT_MAX 2147483647
 
 int	ft_iswhitespace(const char *chr)
 {
@@ -38,6 +39,8 @@ int	ft_atoi(const char *str)
 		str++;
 	while (ft_isdigit(*str))
 	{
+		if ((result > FT_INT_MAX / 10))
+			return ((result = is_negative ? 0 : -1));
 		result = result * 10 + (*str - '0');
 		str++;
 	}
