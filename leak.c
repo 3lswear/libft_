@@ -17,6 +17,11 @@
 	/* 		result++; */
 	/* 	return (result); */
 	/* } */
+char mapi_func(unsigned int num, char c)
+{
+	(void)num;
+	return (ft_toupper(c));
+}
 
 int main()
 {
@@ -63,8 +68,10 @@ int main()
 	splt_i = 0;
 	if (split_result)
 	{
+		printf("result is a valid ptr!!\n");
 		while (split_result[splt_i])
 		{
+			printf("freeing block\t%d\n", splt_i);
 			free(split_result[splt_i]);
 			splt_i++;
 		}
@@ -73,5 +80,80 @@ int main()
 	ft_putchar_fd('\n', 1);
 	ft_putendl_fd("▓▓▓▓▓▓▓▓▓▓▓▓▓▓ |||> CALLOC <||| ▓▓▓▓▓▓▓▓▓▓▓▓▓▓", 1);
 	ft_putchar_fd('\n', 1);
+
+	char *calloc_result;
+	calloc_result = calloc(21, sizeof(char));
+	strlcpy(calloc_result, "i am a string haiii", 21);
+	if (calloc_result)
+	{
+		printf("calloc_result =>\t[%s]\n", calloc_result);
+		free(calloc_result);
+	}
+	ft_putchar_fd('\n', 1);
+	ft_putendl_fd("▓▓▓▓▓▓▓▓▓▓▓▓▓▓ |||> ITOA <||| ▓▓▓▓▓▓▓▓▓▓▓▓▓▓", 1);
+	ft_putchar_fd('\n', 1);
+	char *itoa_result;
+	if ((itoa_result = ft_itoa(1354651848)))
+	{
+		printf("itoa_result =>\t[%s]\n", itoa_result);
+		free(itoa_result);
+	}
+	ft_putchar_fd('\n', 1);
+	ft_putendl_fd("▓▓▓▓▓▓▓▓▓▓▓▓▓▓ |||> STRMAPI <||| ▓▓▓▓▓▓▓▓▓▓▓▓▓▓", 1);
+	ft_putchar_fd('\n', 1);
+	char *mapi_string = "hi im a lowercase string";
+	char *mapi_result;
+	mapi_result= ft_strmapi(mapi_string, *mapi_func); 
+	if (mapi_result)
+	{
+		printf("mapi_result =>\t[%s]\n", mapi_result);
+		free(mapi_result);
+	}
+
+	ft_putchar_fd('\n', 1);
+	ft_putendl_fd("▓▓▓▓▓▓▓▓▓▓▓▓▓▓ |||> STRTRIM <||| ▓▓▓▓▓▓▓▓▓▓▓▓▓▓", 1);
+	ft_putchar_fd('\n', 1);
+	char *trim_str = "aaaaaaaaaaaaaaaaaaim screaming its very scaryaaaaaaaaaaaaaaaaaaaaaaaaaa";
+	char *trim_set = "a";
+	char *trim_result;
+
+	if ((trim_result = ft_strtrim(trim_str, trim_set)))
+	{
+		printf("trim_result =>\t[%s]\n", trim_result);
+		free(trim_result);
+	}
+
+	ft_putchar_fd('\n', 1);
+	ft_putendl_fd("▓▓▓▓▓▓▓▓▓▓▓▓▓▓ |||> STRJOIN <||| ▓▓▓▓▓▓▓▓▓▓▓▓▓▓", 1);
+	ft_putchar_fd('\n', 1);
+	char *join_str1 = "hi my name is";
+	char *join_str2 = " roma !!!!";
+	char *join_result;
+	if ((join_result = ft_strjoin(join_str1, join_str2)))
+	{
+		printf("join_result =>\t[%s]\n", join_result);
+		free(join_result);
+	}
+	ft_putchar_fd('\n', 1);
+	ft_putendl_fd("▓▓▓▓▓▓▓▓▓▓▓▓▓▓ |||> SUBSTR <||| ▓▓▓▓▓▓▓▓▓▓▓▓▓▓", 1);
+	ft_putchar_fd('\n', 1);
+	char *substr_str = "hello i am a very long string of which you need to find a substring";
+	char *substr_result;
+
+	if ((substr_result = ft_substr(substr_str, 0, 10)))
+	{
+		printf("substr_result =>\t[%s]\n", substr_result);
+		free(substr_result);
+	}
+	ft_putchar_fd('\n', 1);
+	ft_putendl_fd("▓▓▓▓▓▓▓▓▓▓▓▓▓▓ |||> STRDUP <||| ▓▓▓▓▓▓▓▓▓▓▓▓▓▓", 1);
+	ft_putchar_fd('\n', 1);
+	char *dup_str = "hai i am a string to duplicate";
+	char *dup_result;
+	if ((dup_result = ft_strdup(dup_str)))
+	{
+		printf("dup_result =>\t[%s]\n", dup_result);
+		free(dup_result);
+	}
 	return 0;
 }
