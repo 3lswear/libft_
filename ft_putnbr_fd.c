@@ -6,13 +6,13 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/13 15:54:33 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/24 04:33:13 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/26 16:03:36 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		get_round_dec(int n)
+static int	get_round_dec(int n)
 {
 	int decimal;
 
@@ -22,7 +22,7 @@ int		get_round_dec(int n)
 	return (decimal);
 }
 
-void	ft_putnbr_fd(int num, int fd)
+void		ft_putnbr_fd(int num, int fd)
 {
 	char	digit;
 	int		power;

@@ -6,13 +6,13 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 00:40:34 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/26 02:09:09 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/26 16:05:43 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				ft_issep(const char *s, char sep)
+static int			ft_issep(const char *s, char sep)
 {
 	if (*s == sep)
 		return (1);
@@ -20,7 +20,7 @@ int				ft_issep(const char *s, char sep)
 		return (0);
 }
 
-unsigned int	get_wc(const char *s, char sep)
+static unsigned int	get_wc(const char *s, char sep)
 {
 	unsigned int count;
 
@@ -39,7 +39,7 @@ unsigned int	get_wc(const char *s, char sep)
 	return (count);
 }
 
-void			*liberator(char **array)
+static void			*liberator(char **array)
 {
 	size_t i;
 
@@ -53,7 +53,7 @@ void			*liberator(char **array)
 	return (NULL);
 }
 
-char			**ft_split(char const *s, char c)
+char				**ft_split(char const *s, char c)
 {
 	char			**result;
 	unsigned int	wc;

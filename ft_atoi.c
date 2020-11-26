@@ -6,14 +6,14 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/17 15:00:27 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/26 14:37:35 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/26 16:06:40 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #define FT_INT_MAX 2147483647
 
-int	ft_iswhitespace(const char *chr)
+static int	ft_iswhitespace(const char *chr)
 {
 	if (*chr == '\n' || *chr == '\v' || *chr == '\f' ||
 			*chr == '\r' || *chr == ' ' || *chr == '\t')
@@ -21,7 +21,7 @@ int	ft_iswhitespace(const char *chr)
 	return (0);
 }
 
-int	ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	int is_negative;
 	int result;

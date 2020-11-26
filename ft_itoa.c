@@ -6,13 +6,13 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 15:25:09 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/25 22:29:56 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/26 16:04:55 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_lg(int n)
+static size_t	ft_lg(int n)
 {
 	size_t result;
 
@@ -22,7 +22,7 @@ size_t	ft_lg(int n)
 	return (result);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	size_t	len;
 	char	*result;
