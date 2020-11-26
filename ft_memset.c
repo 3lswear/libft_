@@ -6,11 +6,13 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/12 13:32:27 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/12 18:36:47 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/26 05:18:12 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *s, int c, unsigned int n)
+#include "libft.h"
+
+void	*ft_memset(void *s, int c, size_t n)
 {
 	char *dest;
 
