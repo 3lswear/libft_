@@ -6,7 +6,7 @@
 #    By: sunderle <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/09 20:03:30 by sunderle          #+#    #+#              #
-#    Updated: 2020/11/26 01:32:50 by sunderle         ###   ########.fr        #
+#    Updated: 2020/11/26 17:23:23 by sunderle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,12 +56,14 @@ SRC = \
 
 OBJS = $(SRC:.c=.o)
 
-HEADER = ./libft.h
+HEADER = libft.h
+
+INCLUDES = ./
 
 all: $(NAME)
 
 $(OBJS): %.o: %.c $(HEADER)
-	$(CC) $(CFLAGS) -c $< -include $(HEADER)
+	$(CC) $(CFLAGS) -c $< -I $(INCLUDES)
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
