@@ -178,11 +178,6 @@ int main()
 	printf("output of ft_itoa ->\t[%s]\n", ft_itoa(itoa_n));
 	printf("oupput of printf ->\t[%d]\n", itoa_n);
 
-	ft_putchar_fd('\n', 1);
-
-	char *atoi_int = "     -214 7483647    ";
-	printf("ft_atoi \t%d\n", ft_atoi(atoi_int));
-	printf("atoi \t\t%d\n", atoi(atoi_int));
 
 	ft_putchar_fd('\n', 1);
 
@@ -242,5 +237,11 @@ int main()
 		printf("[%s]\n", split_result[splt_i]);
 		splt_i++;
 	}
+
+	ft_putchar_fd('\n', 1);
+
+	char *atoi_int = "2147483649";
+	printf("ft_atoi \t%d\n", ft_atoi(atoi_int));
+	printf("atoi \t\t%d\n", atoi(atoi_int));
 	return 0;
 }
