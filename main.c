@@ -240,8 +240,10 @@ int main()
 
 	ft_putchar_fd('\n', 1);
 
-	char *atoi_int = "2147483649";
-	printf("ft_atoi \t%d\n", ft_atoi(atoi_int));
-	printf("atoi \t\t%d\n", atoi(atoi_int));
+	/* char *atoi_int = "2147483649"; */
+	/* printf("ft_atoi \t%d\n", ft_atoi(atoi_int)); */
+	/* printf("atoi \t\t%d\n", atoi(atoi_int)); */
+	/* ft_bzero(NULL, 2); */
+	printf("%p\n", NULL);
 	return 0;
 }
