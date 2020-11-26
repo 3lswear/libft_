@@ -6,11 +6,13 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 02:56:21 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/18 03:42:42 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/26 05:20:17 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_memcmp(void *s1, void *s2, unsigned int n)
+#include "libft.h"
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	int				retval;
 	unsigned int	count;
