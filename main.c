@@ -245,5 +245,8 @@ int main()
 	/* printf("atoi \t\t%d\n", atoi(atoi_int)); */
 	/* ft_bzero(NULL, 2); */
 	printf("%p\n", NULL);
+
+	char *substr_str2 = "lorem ipsum dolor sit amet";
+	printf("ft_substr ->\t[%s]\n", ft_substr(substr_str2, 400, 20));
 	return 0;
 }
