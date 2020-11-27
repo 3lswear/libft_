@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 21:25:35 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/25 22:24:39 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/27 15:36:47 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	total;
 	void	*result;
 
-	if (FT_SIZE_MAX / nmemb < size)
+	if ((nmemb) && ((FT_SIZE_MAX / nmemb) < size))
 		return (NULL);
 	total = nmemb * size;
 	result = malloc(total);
