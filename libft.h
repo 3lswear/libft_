@@ -6,13 +6,13 @@
 /*   By: sunderle <marvin@43.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 12:33:06 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/26 05:34:26 by sunderle         ###   ########.fr       */
+/*   Updated: 2020/11/27 15:02:30 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define FT_SIZE_MAX (18446744073709551615UL)
+# define FT_SIZE_MAX 18446744073709551615UL
 
 # include <unistd.h>
 # include <stdlib.h>
