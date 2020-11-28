@@ -6,7 +6,7 @@
 #    By: sunderle <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/09 20:03:30 by sunderle          #+#    #+#              #
-#    Updated: 2020/11/26 17:23:23 by sunderle         ###   ########.fr        #
+#    Updated: 2020/11/28 20:31:45 by sunderle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -101,6 +101,6 @@ norm:
 
 so:
 	$(CC) -fPIC $(CFLAGS) -c $(SRC)
-	gcc -shared -o libft.so $(OBJS)
+	$(CC) -shared -o libft.so $(OBJS)
 
 .PHONY: clean fclean all re
