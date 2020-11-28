@@ -223,11 +223,11 @@ int main()
 
 	ft_putchar_fd('\n', 1);
 
-	printf("strnstr ->\t[%s]\n", strnstr("lorem ipsum dolor sit amet", "", 1));
 
 	ft_putchar_fd('\n', 1);
 
-	char *split_str = "      split       this for   me  !       ";
+	ft_putendl_fd("▓▓▓▓▓▓▓▓▓▓▓▓▓▓ |||> SPLIT <||| ▓▓▓▓▓▓▓▓▓▓▓▓▓▓", 1);
+	char *split_str = "      split   this     for   me please !!!             ";
 	char sep = ' ';
 	char **split_result;
 	int splt_i = 0;
@@ -244,9 +244,60 @@ int main()
 	/* printf("ft_atoi \t%d\n", ft_atoi(atoi_int)); */
 	/* printf("atoi \t\t%d\n", atoi(atoi_int)); */
 	/* ft_bzero(NULL, 2); */
-	printf("%p\n", NULL);
+	/* printf("%p\n", NULL); */
 
-	char *substr_str2 = "lorem ipsum dolor sit amet";
-	printf("ft_substr ->\t[%s]\n", ft_substr(substr_str2, 400, 20));
+	/* char *substr_str2 = "lorem ipsum dolor sit amet"; */
+	/* int substr_i = 0; */
+	/* while (substr_i++ < 400) */
+	/* 	printf("ft_substr ->\t[%s]\n", ft_substr(substr_str2, substr_i, 20)); */
+	char *calloc_test;
+	calloc_test = (char *)ft_calloc(0, 1);
+	if (calloc_test)
+		printf("CALLOCated!!\t[%p]\n", calloc_test);
+	ft_putendl_fd("▓▓▓▓▓▓▓▓▓▓▓▓▓▓ |||> STRNSTR <||| ▓▓▓▓▓▓▓▓▓▓▓▓▓▓", 1);
+	char *strnstr_hay = "asdfasdfasdfsadf a very long string";
+	/* char *strnstr_hay = (char *)malloc(15 * sizeof(char)); */
+	/* memset(strnstr_hay, 'a', 15); */
+	char *strnstr_needle = "asdfasdfasdfsadf a very long string";
+	char *strnstr_res;
+
+	size_t strnstr_len = 0;
+	while (strnstr_len < 38)
+	{
+		printf("len => %lu\n", strnstr_len);
+		printf("strnstr ->\t[%s]\n", ((strnstr_res = strnstr(strnstr_hay, strnstr_needle, strnstr_len)) ?
+					strnstr_res : "NULL"));
+		printf("ft_strnstr ->\t[%s]\n", ((strnstr_res = ft_strnstr(strnstr_hay, strnstr_needle, strnstr_len)) ?
+					strnstr_res : "NULL"));
+		printf("\n");
+		strnstr_len++;
+	}
+	printf("%p\n", strnstr_hay);
+	printf("%p\n", strnstr_needle);
+	printf("strnstr ->\t[%s]\n", ((strnstr_res = strnstr("ababac", "abac", 0)) ?
+					strnstr_res : "NULL"));
+	printf("ft_strnstr ->\t[%s]\n", ((strnstr_res = ft_strnstr("ababac", "abac", 0)) ?
+					strnstr_res : "NULL"));
+	/* printf("strnstr ->\t[%s]\n", ((strnstr_res = strnstr(NULL, "abac", 5)) ? */
+	/* 				strnstr_res : "NULL")); */
+	/* printf("ft_strnstr ->\t[%s]\n", ((strnstr_res = ft_strnstr(NULL, "abac", 5)) ? */
+	/* 				strnstr_res : "NULL")); */
+
+	printf("strnstr ->\t[%s]\n", ((strnstr_res = strnstr(NULL, "", 100)) ?
+					strnstr_res : "NULL"));
+	printf("ft_strnstr ->\t[%s]\n", ((strnstr_res = ft_strnstr(NULL, "", 100)) ?
+					strnstr_res : "NULL"));
+	printf("strnstr ->\t[%s]\n", ((strnstr_res = strnstr("ababac", "abac", 6)) ?
+					strnstr_res : "NULL"));
+	printf("ft_strnstr ->\t[%s]\n", ((strnstr_res = ft_strnstr("ababac", "abac", 6)) ?
+					strnstr_res : "NULL"));
+
+	printf("\n\n\n");
+	printf("strnstr ->\t[%s]\n", ((strnstr_res = strnstr(NULL, "", 10)) ?
+					strnstr_res : "NULL"));
+	printf("ft_strnstr ->\t[%s]\n", ((strnstr_res = ft_strnstr(NULL, "", 10)) ?
+					strnstr_res : "NULL"));
+	printf("size_t oveflow -> [%lu]\n", FT_SIZE_MAX + 8);
+
 	return 0;
 }
