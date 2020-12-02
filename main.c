@@ -255,7 +255,7 @@ int main()
 	if (calloc_test)
 		printf("CALLOCated!!\t[%p]\n", calloc_test);
 	ft_putendl_fd("▓▓▓▓▓▓▓▓▓▓▓▓▓▓ |||> STRNSTR <||| ▓▓▓▓▓▓▓▓▓▓▓▓▓▓", 1);
-	char *strnstr_hay = "asdfasdfasdfsadf a very long string";
+	char *strnstr_hay = "asdfasdfasdfsadf a very long string\0";
 	/* char *strnstr_hay = (char *)malloc(15 * sizeof(char)); */
 	/* memset(strnstr_hay, 'a', 15); */
 	char *strnstr_needle = "asdfasdfasdfsadf a very long string";
@@ -292,12 +292,56 @@ int main()
 	printf("ft_strnstr ->\t[%s]\n", ((strnstr_res = ft_strnstr("ababac", "abac", 6)) ?
 					strnstr_res : "NULL"));
 
+	/* ft_putendl_fd("▓▓▓▓▓▓▓▓▓▓▓▓▓▓ |||> SPLIT <||| ▓▓▓▓▓▓▓▓▓▓▓▓▓▓", 1); */
+	/* split_str = "      split   this     for   me please !!!             "; */
+	/* sep = ' '; */
+	/* splt_i = 0; */
+	/* split_result = ft_split(split_str, '\0'); */
+	/* while (split_result[splt_i]) */
+	/* { */
+	/* 	printf("[%s]\n", split_result[splt_i]); */
+	/* 	splt_i++; */
+	/* } */
 	printf("\n\n\n");
-	printf("strnstr ->\t[%s]\n", ((strnstr_res = strnstr(NULL, "", 10)) ?
+	printf("strnstr ->\t[%s]\n", ((strnstr_res = strnstr(NULL, "abc", 2)) ?
 					strnstr_res : "NULL"));
-	printf("ft_strnstr ->\t[%s]\n", ((strnstr_res = ft_strnstr(NULL, "", 10)) ?
+	printf("ft_strnstr ->\t[%s]\n", ((strnstr_res = ft_strnstr(NULL, "abc", 2)) ?
 					strnstr_res : "NULL"));
 	printf("size_t oveflow -> [%lu]\n", FT_SIZE_MAX + 8);
+	/* ft_putendl_fd("▓▓▓▓▓▓▓▓▓▓▓▓▓▓ |||> STRLCAT <||| ▓▓▓▓▓▓▓▓▓▓▓▓▓▓", 1); */
+
+	/* char *cat_dest; */
+	/* char *ft_cat_dest; */
+
+	/* cat_dest = (char *)malloc(sizeof(*cat_dest) * 25); */
+	/* ft_cat_dest = (char *)malloc(sizeof(*cat_dest) * 25); */
+	/* int cat_size = 0; */
+
+	/* memset(cat_dest, 'r', 15); */
+	/* memset(ft_cat_dest, 'r', 15); */
+
+	/* while (cat_size <= 30) */
+	/* { */
+	/* 	cat_dest = (char *)malloc(sizeof(*cat_dest) * 25); */
+	/* 	ft_cat_dest = (char *)malloc(sizeof(*cat_dest) * 25); */
+
+	/* 	memset(cat_dest, 'r', 15); */
+	/* 	memset(ft_cat_dest, 'r', 15); */
+
+	/* 	printf("ft_strlcat ->\t[%lu]\n", */ 
+	/* 			ft_strlcat(ft_cat_dest, "lorem ipsum dolor sit amet", cat_size)); */
+	/* 	printf("ft_cat_dest =>\t[%s]\n", ft_cat_dest); */
+
+	/* 	printf("strlcat ->\t[%lu]\n", */ 
+	/* 			strlcat(cat_dest, "lorem ipsum dolor sit amet", cat_size)); */
+	/* 	printf("cat_dest =>\t[%s]\n", cat_dest); */
+	/* 	cat_size++; */
+	/* 	printf("\n\n\n"); */
+	/* } */
+
+	/* printf("\n\n\n"); */
+	/* write(1, cat_dest, 15); */
+	ft_putendl_fd("", 1);
 
 	return 0;
 }
