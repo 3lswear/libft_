@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 15:01:46 by sunderle          #+#    #+#             */
-/*   Updated: 2021/01/23 11:10:18 by sunderle         ###   ########.fr       */
+/*   Updated: 2021/01/23 11:18:48 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strchr_bd(const char *s, int c, int dir)
 	retval = NULL;
 	i = 0;
 	len = ft_strlen(s);
-	while (len)
+	while (i <= len)
 	{
 		if ((unsigned char)c == s[i])
 			retval = (char *)&s[i];
