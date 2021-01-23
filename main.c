@@ -303,11 +303,11 @@ int main()
 	/* 	splt_i++; */
 	/* } */
 	printf("\n\n\n");
-	printf("strnstr ->\t[%s]\n", ((strnstr_res = strnstr(NULL, "abc", 2)) ?
-					strnstr_res : "NULL"));
-	printf("ft_strnstr ->\t[%s]\n", ((strnstr_res = ft_strnstr(NULL, "abc", 2)) ?
-					strnstr_res : "NULL"));
-	printf("size_t oveflow -> [%lu]\n", FT_SIZE_MAX + 8);
+	/* printf("strnstr ->\t[%s]\n", ((strnstr_res = strnstr(NULL, "abc", 2)) ? */
+	/* 				strnstr_res : "NULL")); */
+	/* printf("ft_strnstr ->\t[%s]\n", ((strnstr_res = ft_strnstr(NULL, "abc", 2)) ? */
+	/* 				strnstr_res : "NULL")); */
+	/* printf("size_t oveflow -> [%lu]\n", FT_SIZE_MAX + 8); */
 	/* ft_putendl_fd("▓▓▓▓▓▓▓▓▓▓▓▓▓▓ |||> STRLCAT <||| ▓▓▓▓▓▓▓▓▓▓▓▓▓▓", 1); */
 
 	/* char *cat_dest; */
