@@ -6,7 +6,7 @@
 #    By: sunderle <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/09 20:03:30 by sunderle          #+#    #+#              #
-#    Updated: 2020/11/28 20:31:45 by sunderle         ###   ########.fr        #
+#    Updated: 2021/04/18 12:56:29 by sunderle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,8 +96,8 @@ testleaks: leak.out
 	valgrind ./leak.out
 
 norm:
-	norminette_linux -R CheckForbiddenSourceHeader $(SRC) | $(GREPHL)
-	norminette_linux -R CheckForbiddenSourceHeader $(HEADER) | $(GREPHL)
+	norminette $(SRC) | $(GREPHL)
+	norminette $(HEADER) | $(GREPHL)
 
 so:
 	$(CC) -fPIC $(CFLAGS) -c $(SRC)
