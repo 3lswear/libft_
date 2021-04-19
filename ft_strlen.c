@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 19:19:48 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/23 12:54:24 by sunderle         ###   ########.fr       */
+/*   Updated: 2021/04/19 18:23:35 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *str)
 {
-	size_t count;
+	size_t	count;
 
 	count = 0;
 	while (*str != '\0')

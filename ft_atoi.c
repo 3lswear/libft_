@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/17 15:00:27 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/26 16:06:40 by sunderle         ###   ########.fr       */
+/*   Updated: 2021/04/19 18:24:51 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 
 static int	ft_iswhitespace(const char *chr)
 {
-	if (*chr == '\n' || *chr == '\v' || *chr == '\f' ||
-			*chr == '\r' || *chr == ' ' || *chr == '\t')
+	if (*chr == '\n' || *chr == '\v' || *chr == '\f'
+		|| *chr == '\r' || *chr == ' ' || *chr == '\t')
 		return (1);
 	return (0);
 }
 
-int			ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int is_negative;
-	int result;
+	int	is_negative;
+	int	result;
 
 	result = 0;
 	is_negative = 0;
@@ -40,7 +40,7 @@ int			ft_atoi(const char *str)
 	while (ft_isdigit(*str))
 	{
 		if ((result > FT_INT_MAX / 10))
-			return ((result = is_negative ? 0 : -1));
+			return ((result = is_negative - 1));
 		result = result * 10 + (*str - '0');
 		str++;
 	}

@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 03:12:18 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/25 16:00:48 by sunderle         ###   ########.fr       */
+/*   Updated: 2021/04/19 18:25:10 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memcpy_bd(void *dest, const void *src, size_t n, int dir)
 {
-	char *d;
-	char *s;
+	char	*d;
+	char	*s;
 
 	d = (char *)dest;
 	s = (char *)src;

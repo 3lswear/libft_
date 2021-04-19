@@ -6,13 +6,13 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 00:40:34 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/26 16:05:43 by sunderle         ###   ########.fr       */
+/*   Updated: 2021/04/19 18:20:40 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int			ft_issep(const char *s, char sep)
+static int	ft_issep(const char *s, char sep)
 {
 	if (*s == sep)
 		return (1);
@@ -22,7 +22,7 @@ static int			ft_issep(const char *s, char sep)
 
 static unsigned int	get_wc(const char *s, char sep)
 {
-	unsigned int count;
+	unsigned int	count;
 
 	count = 0;
 	while (*s)
@@ -39,9 +39,9 @@ static unsigned int	get_wc(const char *s, char sep)
 	return (count);
 }
 
-static void			*liberator(char **array)
+static void	*liberator(char **array)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (array[i])
@@ -53,15 +53,26 @@ static void			*liberator(char **array)
 	return (NULL);
 }
 
-char				**ft_split(char const *s, char c)
+char 	**checks(const char *s, char c)
+{
+	char	**result;
+
+	if (!s)
+		return (NULL);
+	result = ft_calloc((get_wc(s, c) + 1), sizeof(char *));
+	return (result);
+}
+
+char	**ft_split(char const *s, char c)
 {
 	char			**result;
 	unsigned int	wc;
 	unsigned int	j;
 	int				len;
 
-	if (!s || !(result = (char **)malloc((get_wc(s, c) + 1) * sizeof(char *))))
-		return (NULL);
+	result = checks(s, c);
+	if (!result)
+		return (result);
 	j = 0;
 	wc = get_wc(s, c);
 	while (j < wc)
@@ -71,7 +82,8 @@ char				**ft_split(char const *s, char c)
 		len = ft_strchr(s, c) - s;
 		if (len < 0)
 			len = ft_strlen(s);
-		if (!(result[j++] = ft_substr(s, 0, len)))
+		result[j++] = ft_substr(s, 0, len);
+		if (!result[j - 1])
 			return (liberator(result));
 		while (!ft_issep(s, c) && *s)
 			s++;

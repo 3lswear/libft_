@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/12 13:32:27 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/26 05:18:12 by sunderle         ###   ########.fr       */
+/*   Updated: 2021/04/19 18:25:39 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	char *dest;
+	char	*dest;
 
 	if (n)
 		dest = s;

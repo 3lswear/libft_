@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 12:03:02 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/27 16:07:39 by sunderle         ###   ########.fr       */
+/*   Updated: 2021/04/19 18:21:29 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *result;
+	char	*result;
 
 	if (!s)
 		return (NULL);

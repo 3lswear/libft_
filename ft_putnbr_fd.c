@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/13 15:54:33 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/26 16:03:36 by sunderle         ###   ########.fr       */
+/*   Updated: 2021/04/19 18:22:16 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	get_round_dec(int n)
 {
-	int decimal;
+	int	decimal;
 
 	decimal = 1;
 	while ((n / decimal >= 10) || (n / decimal <= -10))
@@ -22,7 +22,7 @@ static int	get_round_dec(int n)
 	return (decimal);
 }
 
-void		ft_putnbr_fd(int num, int fd)
+void	ft_putnbr_fd(int num, int fd)
 {
 	char	digit;
 	int		power;

@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 02:56:21 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/26 05:20:17 by sunderle         ###   ########.fr       */
+/*   Updated: 2021/04/19 18:23:13 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (count++ < n)
 	{
 		retval = ((unsigned char *)s1)[count - 1] - ((unsigned char *)s2)
-			[count - 1];
+		[count - 1];
 		if (retval)
 			return (retval);
 	}

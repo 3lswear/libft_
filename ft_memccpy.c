@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 12:23:02 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/25 13:23:08 by sunderle         ###   ########.fr       */
+/*   Updated: 2021/04/19 16:17:35 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	unsigned char *d;
-	unsigned char *s;
-	unsigned char *stop;
+	unsigned char	*d;
+	unsigned char	*s;
+	unsigned char	*stop;
 
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;

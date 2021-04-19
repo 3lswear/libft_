@@ -6,7 +6,7 @@
 /*   By: sunderle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 15:25:09 by sunderle          #+#    #+#             */
-/*   Updated: 2020/11/26 16:04:55 by sunderle         ###   ########.fr       */
+/*   Updated: 2021/04/19 18:20:05 by sunderle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,18 @@
 
 static size_t	ft_lg(int n)
 {
-	size_t result;
+	size_t	result;
 
 	result = 0;
-	while ((n /= 10))
+	while (n)
+	{
+		n /= 10;
 		result++;
+	}
 	return (result);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	size_t	len;
 	char	*result;
@@ -33,13 +36,15 @@ char			*ft_itoa(int n)
 	len = ft_lg(num) + 1;
 	if (num < 0)
 		len++;
-	if (!(result = (char *)malloc((len + 1) * sizeof(char))))
+	result = ft_calloc((len + 1), sizeof(char));
+	if (!result)
 		return (NULL);
 	result[len] = '\0';
 	while (len--)
 	{
 		digit = num % 10;
-		digit = (num < 0) ? -digit : digit;
+		if (num < 0)
+			digit = -digit;
 		result[len] = digit + '0';
 		num /= 10;
 	}
