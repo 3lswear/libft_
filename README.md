@@ -1,5 +1,5 @@
-# libft
-My reimplementation of several libc functions plus some more. No bonuses(bloat).
+# C Library
+My reimplementation of several libc functions plus some more. No bonuses (bloat).
 ___
 
 The first project at 42cursus.
